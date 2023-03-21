@@ -2,11 +2,10 @@ package com.nozbe.watermelondb
 
 import android.content.Context
 import android.database.Cursor
-import android.database.sqlite.SQLiteCursor
-import android.database.sqlite.SQLiteCursorDriver
-//import android.database.sqlite.SQLiteDatabase
-import android.database.sqlite.SQLiteQuery
-import net.zetetic.database.sqlcipher.SQLiteDatabase;
+import net.zetetic.database.sqlcipher.SQLiteCursor
+import net.zetetic.database.sqlcipher.SQLiteCursorDriver
+import net.zetetic.database.sqlcipher.SQLiteDatabase
+import net.zetetic.database.sqlcipher.SQLiteQuery
 import java.io.File
 
 class Database private constructor(private val db: SQLiteDatabase) {
