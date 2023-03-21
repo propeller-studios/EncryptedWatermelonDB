@@ -55,7 +55,7 @@ class Database private constructor(private val db: SQLiteDatabase) {
                     // On some systems there is some kind of lock on `/databases` folder ¯\_(ツ)_/¯
                     context.getDatabasePath("$name.db").path.replace("/databases", "")
                 }
-            return SQLiteDatabase.openOrCreateDatabase(path, "Pr0pSQL1t3P455w0rd!", null)
+            return SQLiteDatabase.openOrCreateDatabase(path, "Pr0pSQL1t3P455w0rd!", null, null, null)
         }
     }
 
