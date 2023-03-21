@@ -4,8 +4,9 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteCursor
 import android.database.sqlite.SQLiteCursorDriver
-import android.database.sqlite.SQLiteDatabase
+//import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteQuery
+import net.sqlcipher.database.SQLiteDatabase
 import java.io.File
 
 class Database private constructor(private val db: SQLiteDatabase) {
@@ -54,7 +55,7 @@ class Database private constructor(private val db: SQLiteDatabase) {
                     // On some systems there is some kind of lock on `/databases` folder ¯\_(ツ)_/¯
                     context.getDatabasePath("$name.db").path.replace("/databases", "")
                 }
-            return SQLiteDatabase.openDatabase(path, null, openFlags)
+            return SQLiteDatabase.openOrCreateDatabase(path, "Pr0pSQL1t3P455w0rd!", null)
         }
     }
 
